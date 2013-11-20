@@ -78,6 +78,13 @@ var plunker = angular.module("plunker", ['ngRoute'])
     $scope.response = Welcome.translate();
     $scope.anthem = Welcome.nation().anthem;
     $scope.gender = Pledge.getGender("male");
+    $scope.fetchInfo = function () {
+
+        var someName = LocalStorage.get("name");
+        $scope.fetch = someName;
+        
+    }
+        
 }
 
 ]);
