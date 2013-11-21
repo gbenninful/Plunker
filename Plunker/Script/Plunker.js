@@ -60,7 +60,7 @@ var plunker = angular.module("plunker", ['ngRoute'])
     return {
         save: function (key, data) {
             amplify.store(key, data);
-
+            
         },
         get: function (key) {
 
@@ -70,7 +70,7 @@ var plunker = angular.module("plunker", ['ngRoute'])
 })
 
 // Create a button called Fetch from local storage and make it work
-//RESUME CODING FROM HERE!!!
+
 .controller("MainController", ["$scope", "Greeting", "Welcome","Pledge", "LocalStorage", function ($scope, Greeting, Welcome, Pledge, LocalStorage) {
     LocalStorage.save("name", "Danny boy");
     $scope.greeting = Greeting;
